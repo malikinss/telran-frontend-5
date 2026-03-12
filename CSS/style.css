@@ -1,0 +1,140 @@
+/* ========================
+   BODY STYLES
+   ======================== */
+
+body {
+	/* Applies styles to the entire page */
+	margin: 0; /* Removes the browser's default outer margin around the page */
+	background-color: whitesmoke; /* Sets a light gray background color */
+	font-family:
+		"Raleway", sans-serif; /* Sets the main font used on the page */
+}
+
+/* ========================
+   HEADER SECTION
+   ======================== */
+
+.header {
+	/* The top section of the page */
+	height: 400px; /* Sets a fixed height for the header */
+	background-image: url("../Images/coffee-bgnd.jpeg"); /* Adds a background image */
+	background-size: cover; /* Scales the image so it completely covers the header */
+	background-position: center; /* Centers the image inside the header */
+	padding-top: 133px; /* Pushes the heading downward inside the header */
+	box-sizing: border-box; /* Makes padding included in the element's total height */
+}
+
+/* ========================
+   MAIN HEADER TEXT
+   ======================== */
+
+h1 {
+	/* Styles for the main page title */
+	font-size: 100px; /* Makes the title very large */
+	font-family:
+		"Covered By Your Grace", cursive; /* Uses a decorative handwritten font */
+	color: rgba(3, 150, 150, 0.75); /* Sets a semi-transparent teal color */
+	text-align: center; /* Centers the text horizontally */
+	margin: 0; /* Removes the default margin browsers add to headings */
+}
+
+/* ========================
+   MAIN CONTENT CONTAINER
+   ======================== */
+
+.main {
+	/* Main container holding the content columns */
+	margin: 0; /* Removes external spacing */
+	padding: 0; /* Removes internal spacing */
+	position: relative; /* Makes this element the reference point for absolutely positioned children */
+}
+
+/* ========================
+   COLUMN LAYOUT
+   ======================== */
+
+.left,
+.right {
+	/* Both left and right columns share these styles */
+	position: absolute; /* Positions columns relative to the .main container */
+	top: 0; /* Aligns the columns to the top of the container */
+	width: 49%; /* Each column takes almost half of the container width */
+}
+
+.left {
+	/* Left column */
+	left: 0; /* Positions it at the left side of the container */
+}
+
+.right {
+	/* Right column */
+	right: 0; /* Positions it at the right side of the container */
+}
+
+/* ========================
+   REGION BLOCK
+   ======================== */
+
+.region {
+	/* Individual block describing a coffee region */
+	margin: 50px 0; /* Adds vertical space above and below each region block */
+	border-bottom: 1px solid #e4bb97; /* Adds a thin separator line below the block */
+	padding-bottom: 35px; /* Adds space between the content and the bottom border */
+}
+
+/* ========================
+   TITLE AND LINK STYLE
+   ======================== */
+
+.region > h2,
+.region > a {
+	/* Targets the region title and the link inside the block */
+	text-transform: uppercase; /* Converts text to uppercase letters */
+}
+
+/* ========================
+   TEXT AND LINK PADDING
+   ======================== */
+
+.region > p,
+.region > a {
+	/* Targets the paragraph and link inside the region */
+	padding: 0 10px; /* Adds horizontal padding (left and right) */
+}
+
+/* ========================
+   REGION TITLE STYLE
+   ======================== */
+
+.region > h2 {
+	/* Styles the region title inside the main container */
+	font-size: 28px; /* Sets the font size */
+	font-weight: 700; /* Makes the text bold */
+	text-align: center; /* Centers the title */
+	background-color: #aa8eb5; /* Adds a background color behind the title */
+}
+
+/* ========================
+   REGION DESCRIPTION TEXT
+   ======================== */
+
+.region > p {
+	/* Styles the descriptive paragraph */
+	color: #454; /* Sets the text color */
+	font-weight: 500; /* Uses medium font weight */
+	text-align: justify; /* Aligns text evenly along both edges */
+	text-indent: 32px; /* Adds indentation to the first line of the paragraph */
+	line-height: 1.5; /* Increases spacing between lines for readability */
+}
+
+/* ========================
+   REGION LINK STYLE
+   ======================== */
+
+.region > a {
+	/* Styles the "Learn more" link */
+	color: #214e34; /* Sets the link color */
+	font-weight: 600; /* Makes the link text slightly bold */
+	text-decoration: none; /* Removes the default underline */
+	letter-spacing: 2px; /* Adds spacing between letters */
+}
