@@ -1,140 +1,147 @@
-/* ========================
-   BODY STYLES
-   ======================== */
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
+* {
+	margin: 0; /* Remove default margin for all elements */
+	box-sizing: border-box; /* Include padding and border in element's total width/height */
+}
 
 body {
-	/* Applies styles to the entire page */
-	margin: 0; /* Removes the browser's default outer margin around the page */
-	background-color: whitesmoke; /* Sets a light gray background color */
-	font-family:
-		"Raleway", sans-serif; /* Sets the main font used on the page */
+	font-family: "Bungee", sans-serif; /* Set custom font */
+	background: url("../Images/sky.jpg") no-repeat center center fixed; /* Background image centered and fixed */
+	background-size: cover; /* Ensure background covers entire viewport */
+	color: #ffc500; /* Set default text color */
+	line-height: 1.5; /* Set comfortable line height for readability */
 }
 
-/* ========================
-   HEADER SECTION
-   ======================== */
-
-.header {
-	/* The top section of the page */
-	height: 400px; /* Sets a fixed height for the header */
-	background-image: url("../Images/coffee-bgnd.jpeg"); /* Adds a background image */
-	background-size: cover; /* Scales the image so it completely covers the header */
-	background-position: center; /* Centers the image inside the header */
-	padding-top: 133px; /* Pushes the heading downward inside the header */
-	box-sizing: border-box; /* Makes padding included in the element's total height */
+header,
+footer {
+	background-color: rgba(
+		68,
+		69,
+		67,
+		0.6
+	); /* Semi-transparent dark background */
+	padding: 0.5em; /* Inner spacing */
+	border-radius: 16px; /* Rounded corners */
 }
-
-/* ========================
-   MAIN HEADER TEXT
-   ======================== */
 
 h1 {
-	/* Styles for the main page title */
-	font-size: 100px; /* Makes the title very large */
-	font-family:
-		"Covered By Your Grace", cursive; /* Uses a decorative handwritten font */
-	color: rgba(3, 150, 150, 0.75); /* Sets a semi-transparent teal color */
-	text-align: center; /* Centers the text horizontally */
-	margin: 0; /* Removes the default margin browsers add to headings */
+	text-align: center; /* Center the heading */
+	font-size: 3rem; /* Set large font size */
+	padding: 0.5em; /* Space around heading */
 }
 
-/* ========================
-   MAIN CONTENT CONTAINER
-   ======================== */
-
-.main {
-	/* Main container holding the content columns */
-	margin: 0; /* Removes external spacing */
-	padding: 0; /* Removes internal spacing */
-	position: relative; /* Makes this element the reference point for absolutely positioned children */
+nav {
+	position: fixed; /* Keep navigation always visible */
+	top: 0; /* Align to top of viewport */
+	width: 100%; /* Full width */
+	z-index: 1000; /* Position above other content */
 }
 
-/* ========================
-   COLUMN LAYOUT
-   ======================== */
+nav ul {
+	list-style: none; /* Remove bullet points */
+	padding: 0; /* Remove default padding */
+	text-align: center; /* Center list items */
+}
 
-.left,
-.right {
-	/* Both left and right columns share these styles */
-	position: absolute; /* Positions columns relative to the .main container */
-	top: 0; /* Aligns the columns to the top of the container */
-	width: 49%; /* Each column takes almost half of the container width */
+nav ul li {
+	display: inline-block; /* Align items horizontally */
+	margin: 0 0.5em; /* Horizontal spacing between items */
+}
+
+.button {
+	display: inline-block; /* Allow padding and width without breaking flow */
+	border: 2px solid #ffc500; /* Yellow border */
+	background-color: rgba(
+		204,
+		3,
+		35,
+		0.5
+	); /* Semi-transparent red background */
+	font-size: 1rem; /* Font size */
+	padding: 0.3em 0.6em; /* Inner spacing */
+	border-radius: 5px; /* Rounded corners */
+	cursor: pointer; /* Pointer cursor on hover */
+	transition:
+		background-color 0.3s,
+		transform 0.2s; /* Smooth hover effect */
+}
+
+.button:hover {
+	background-color: rgba(204, 3, 35, 0.8); /* Darker background on hover */
+	transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 .left {
-	/* Left column */
-	left: 0; /* Positions it at the left side of the container */
+	float: left; /* Align container to the left */
+	width: 25%; /* Take 25% of parent width */
+	margin: 0.3rem 1.2rem 0 0; /* Top, right, bottom, left margin */
+}
+
+.left img {
+	width: 100%; /* Fill the container width */
+	box-shadow: 0.6rem 0.6rem 0.6rem gray; /* Apply shadow for depth */
+	border-radius: 16px; /* Rounded corners */
+	display: block; /* Remove inline spacing */
 }
 
 .right {
-	/* Right column */
-	right: 0; /* Positions it at the right side of the container */
+	float: right; /* Align container to the right */
+	width: 50%; /* Take 50% of parent width */
+	border: 1px solid #ffc500; /* Yellow border */
+	border-radius: 16px; /* Rounded corners */
+	padding: 1em; /* Inner spacing */
+	margin: 0.3rem 0 0 0.6rem; /* Top, right, bottom, left margin */
 }
 
-/* ========================
-   REGION BLOCK
-   ======================== */
-
-.region {
-	/* Individual block describing a coffee region */
-	margin: 50px 0; /* Adds vertical space above and below each region block */
-	border-bottom: 1px solid #e4bb97; /* Adds a thin separator line below the block */
-	padding-bottom: 35px; /* Adds space between the content and the bottom border */
+.right h2 {
+	text-align: center; /* Center the heading */
+	font-size: 2rem; /* Medium font size */
+	margin-bottom: 1em; /* Space below heading */
 }
 
-/* ========================
-   TITLE AND LINK STYLE
-   ======================== */
-
-.region > h2,
-.region > a {
-	/* Targets the region title and the link inside the block */
-	text-transform: uppercase; /* Converts text to uppercase letters */
+.gallery {
+	width: 100%; /* Full container width */
+	overflow: hidden; /* Clear floats inside gallery */
 }
 
-/* ========================
-   TEXT AND LINK PADDING
-   ======================== */
-
-.region > p,
-.region > a {
-	/* Targets the paragraph and link inside the region */
-	padding: 0 10px; /* Adds horizontal padding (left and right) */
+.gallery img {
+	float: left; /* Align images horizontally */
+	width: 32%; /* Approximately 3 images per row */
+	margin: calc(4% / (3 * 2)); /* Equal spacing between images */
+	border-radius: 16px; /* Rounded corners */
+	transition: transform 0.3s; /* Smooth hover effect */
 }
 
-/* ========================
-   REGION TITLE STYLE
-   ======================== */
-
-.region > h2 {
-	/* Styles the region title inside the main container */
-	font-size: 28px; /* Sets the font size */
-	font-weight: 700; /* Makes the text bold */
-	text-align: center; /* Centers the title */
-	background-color: #aa8eb5; /* Adds a background color behind the title */
+.gallery img:hover {
+	transform: scale(1.05); /* Slight zoom on hover */
 }
 
-/* ========================
-   REGION DESCRIPTION TEXT
-   ======================== */
-
-.region > p {
-	/* Styles the descriptive paragraph */
-	color: #454; /* Sets the text color */
-	font-weight: 500; /* Uses medium font weight */
-	text-align: justify; /* Aligns text evenly along both edges */
-	text-indent: 32px; /* Adds indentation to the first line of the paragraph */
-	line-height: 1.5; /* Increases spacing between lines for readability */
+.fartext {
+	font-size: 1.8rem; /* Large text */
+	letter-spacing: 0.1em; /* Space between letters */
+	text-align: justify; /* Justify text alignment */
+	line-height: 1.5; /* Comfortable line spacing */
+	margin: 1em; /* Outer spacing */
 }
 
-/* ========================
-   REGION LINK STYLE
-   ======================== */
+img {
+	border-radius: 16px; /* Rounded corners for all images */
+}
 
-.region > a {
-	/* Styles the "Learn more" link */
-	color: #214e34; /* Sets the link color */
-	font-weight: 600; /* Makes the link text slightly bold */
-	text-decoration: none; /* Removes the default underline */
-	letter-spacing: 2px; /* Adds spacing between letters */
+footer {
+	clear: both; /* Ensure footer appears below floated content */
+	margin-top: 1%; /* Space above footer */
+	position: relative; /* Allow positioning of child elements */
+	bottom: 0; /* Align to bottom */
+	left: 0; /* Align to left */
+	width: 100%; /* Full width */
+	text-align: center; /* Center content */
+	border-radius: 16px 16px 0 0; /* Rounded top corners only */
+	padding: 1em 0; /* Vertical padding */
+}
+
+footer .button {
+	position: relative; /* Relative positioning */
+	right: 40%; /* Adjust horizontal position */
 }
