@@ -166,16 +166,16 @@ footer .button {
 ## 📜 Example Layout
 
 ```
-------------------------------------------------
-| Header: Navigation + Luke Skywalker Title   |
-------------------------------------------------
-| Left: Luke Image   | Right: Dream Team      |
-|                   | Image Gallery (3x3)    |
-------------------------------------------------
-| Text describing Luke's story                 |
-------------------------------------------------
-| Footer: Send me email                        |
-------------------------------------------------
+-------------------------------------------------
+|	Header: Navigation + Luke Skywalker Title   |
+-------------------------------------------------
+| Left: Luke Image	| Right: Dream Team			|
+|                   | Image Gallery (3x3)		|
+-------------------------------------------------
+| Text describing Luke's story                 	|
+-------------------------------------------------
+| Footer: Send me email                        	|
+-------------------------------------------------
 ```
 
 ---
