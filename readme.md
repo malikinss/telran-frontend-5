@@ -34,18 +34,18 @@ This project creates a **Star Wars-themed page** featuring:
 ├─ CSS/
 │   └─ style.css
 └─ Images/
-├─ sky.jpg
-├─ luke.jpg
-├─ friend1.jpg
-├─ friend2.jpg
-├─ friend3.jpg
-├─ friend4.jpg
-├─ friend5.jpg
-├─ friend6.jpg
-├─ friend7.jpg
-├─ friend8.jpg
-├─ friend9.jpg
-└─ icon.jpg
+	├─ sky.jpg
+	├─ luke.jpg
+	├─ friend1.jpg
+	├─ friend2.jpg
+	├─ friend3.jpg
+	├─ friend4.jpg
+	├─ friend5.jpg
+	├─ friend6.jpg
+	├─ friend7.jpg
+	├─ friend8.jpg
+	├─ friend9.jpg
+	└─ icon.jpg
 
 ```
 
